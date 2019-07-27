@@ -1,0 +1,17 @@
+{
+  "name": "requestdemo",
+  "version": "1.0.0",
+  "description": "The second assignment of module 3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}
