@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Order Summary</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Status</th>
+    <th>Share</th>
+  </tr>
+  <%for(var i =0; i<orders.length; i++){%>
+  <tr>
+    <td><%=orders[i].name%></td>
+    <td><%=orders[i].address%></td>
+    <td><%=orders[i].email%></td>
+    <td><%=orders[i].status%></td>
+    <td>
+    <form>
+        <button type="submit" formaction="/sendEmail/<%=orders[i].email%>/<%=orders[i].status%>" >Send Email</button>
+    </form>
+    </td>
+  </tr>
+  <%}%>
+</table>
+</body>
+</html>
