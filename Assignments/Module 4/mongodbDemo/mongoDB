@@ -1,0 +1,69 @@
+####################################################################################
+# See all databases
+show dbs
+
+####################################################################################
+# Create new database
+use edureka
+
+####################################################################################
+1) Add 5 movies to the collection, every movie document should include thefollowing properties: name, genre, rating (out of 10)and language.
+
+db.movies.insertMany([
+    {_id:1,"name":"Roja", "genre":"Romance", "rating":4, "language":"Hindi"},
+    {_id:2,"name":"Kadavul", "genre":"Drama", "rating":4, "language":"Tamil"},
+    {_id:3,"name":"Velaikaran", "genre":"Drama", "rating":2, "language":"Telgu"},
+    {_id:4,"name":"The Green Mile", "genre":"Romance", "rating":1, "language":"English"},
+    {_id:5,"name":"Goodfellas", "genre":"Drama", "rating":3, "language":"English"}
+])
+
+####################################################################################
+2) Write a query that returns all the movies
+
+db.movies.find()
+
+####################################################################################
+3) Write a query to find any one movie name using findOne method (Do not use limit() method)
+
+db.movies.findOne({"name":"Goodfellas"})
+
+####################################################################################
+4) Write a query that returns the three highest rated movies
+
+db.movies.find().sort({"rating":-1}).limit(3).pretty()
+
+####################################################################################
+5) Add a key called achievements in any two documents. One document should have ‘Super Hit’ and other should have ‘Super Duper Hit’ as value to key achievements. 
+   This task should be performed in two ways-
+   i. Using update()method 
+   ii. Using save() method
+   Hint: For save, you have to query the object and store it in a variable first
+
+db.movies.update({"name":"Roja"},{
+        $set:{
+          "achievements":"Super Hit"  
+        }
+    }
+)
+
+db.movies.update({"name":"Kadavul"},{
+        $set:{
+          "achievements":"Super Duper Hit"  
+        }
+    }
+)
+
+
+####################################################################################
+6) Write a query that returns all the movies that have boththe ‘Super Hit’ and the ‘Super Duper Hit’ achievements.
+
+db.movies.find({"achievements":{ $in : [ "Super Hit", "Super Duper Hit" ] }})
+
+
+####################################################################################
+7) Write a query that returns only those movies that have achievements
+
+db.movies.find({"achievements":{$exists: true}})
+
+
+
