@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        </style>
+    </head>
+   <body>
+      <div>
+          <center>
+              <a href="./newIssue" role="button">Add New</a>
+          </center></p></p>
+      </div>
+      <div>
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Assignee</th>
+            </tr>
+            <%for(var i =0; i<issues.length; i++){%>
+            <tr>
+                <td><%=issues[i].title%></td>
+                <td><%=issues[i].description%></td>
+                <td><%=issues[i].date%></td>
+                <td><%=issues[i].assignee%></td>
+            </tr>
+            <%}%>
+        </table>
+      </div>
+   </body>
+</html>
