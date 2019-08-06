@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=”ISO-8859-1″>
+<title>Login Page</title>
+<style type=”text/css”>
+body{
+    margin: 100px 0px;
+    padding:0px;
+    text-align:center;
+    align:center;
+}
+
+input[type=text], input[type=password]{
+    width:20%;
+    padding:7px 10px;
+    margin: 8px 0;
+    display:inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button{
+    background-color:#4CAF50;
+    width: 10%;
+    padding: 9px 5px;
+    margin:5px 0;
+    cursor:pointer;
+    border:none;
+    color:#ffffff;
+}
+
+button:hover{
+    opacity:0.8;
+}
+
+#un,#ps{
+    font-family:’Lato’, sans-serif;
+    color: gray;
+}
+</style>
+</head>
+
+<body bgcolor="#E6E7E7">
+<div id="container">
+<form action="/api/auth/login" method="POST" id="flogin">
+<h2>Login</h2>
+
+<label for="lemail" id="lemail">Email:</label>
+<input type="text" name="email" placeholder="Enter email" id="email"><br/><br/>
+
+<label for=”upass” id=”ps”>Password:</label>
+<input type="password" name="password" placeholder="Enter password" id="upass"><br/><br/>
+
+<button type="submit" value="Login"  id="submit">Login</button>
+
+<a href="/register">Register</a>
+
+</form>
+</div>
+
+</body>
+</html> 

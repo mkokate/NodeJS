@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add new user</title>
+</head>
+
+<body>
+    <form action='/users/addUser' method='POST' name='user_form'>
+        Name:<input type='text' name='name'></p>
+        Email:<input type='text' name='email'></p>
+        Password:<input type="text" name="password" /></p>
+        Type:
+        <select name="type">
+            <option value="Admin">Admin</option>
+            <option value="Normal">Normal</option>
+        </select></p>
+        </p>
+        <input type='submit' value='Add'>
+        <a href="/api/auth/logout" role="button">Logout</a>
+    </form>
+</body>
+
+</html>
