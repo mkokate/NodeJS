@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="/css/customstyle.css">
+  <title>Login Page</title>
+</head>
+
+<body>
+  <!-- navbar code start-->
+  <div id="navtop">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand"><img src="/images/mk_logo.png" class="img-fluid" /></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!--navbar code end -->
+
+  <!-- Login Form start -->
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <h2 class="active"> Sign In </h2>
+      <a href="/api/auth/signup">
+        <h2 class="inactive underlineHover">Sign Up</h2>
+      </a>
+      <form name="login" action="/api/auth/login" method="POST">
+        <p class="success"><%=msg%></p>
+        <p class="error"><%=errMsg%></p>
+        <input type="text" id="email" class="fadeIn first" name="email" placeholder="email">
+        <input type="text" id="password" class="fadeIn second" name="password" placeholder="password">
+        <input type="submit" class="fadeIn third" value="Log In">
+      </form>
+    </div>
+  </div>
+  <!-- Login Form end -->
+</body>
+
+</html>

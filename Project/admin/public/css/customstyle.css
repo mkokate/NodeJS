@@ -1,0 +1,51 @@
+/* navbar code style start */
+
+#navtop .active {
+    font-weight: bold;
+}
+
+#navtop .signlogbtn {
+    background: none;
+}
+
+#navtop .signlogbtn {
+    border: solid 1px #00CEFF;
+    color: #00CEFF;
+    padding: .10rem .1rem;
+    font-size: .875rem;
+    line-height: 0.7;
+    border-radius: .4rem;
+}
+
+#navtop .signlogbtn a {
+    color: #00CEFF;
+}
+
+#navtop .signlogbtn:hover {
+    border: solid 1px #787887;
+}
+
+#navtop .signlogbtn a:hover {
+    color: #787887;
+}
+
+#navtop {
+    border-bottom: solid 1px #eaeaf1;
+}
+
+
+/* navbar code style end */
+
+
+/* footer code style start */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
+
+
+/* footer code style end */

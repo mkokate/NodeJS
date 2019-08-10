@@ -1,0 +1,99 @@
+#carouselExampleControls .img-responsive.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    #carouselExampleControls .img-responsive {
+        display: none;
+    }
+    #carouselExampleControls .img-responsive.mobile {
+        display: block;
+    }
+}
+
+#weather .row {
+    width: 100%;
+}
+
+
+#topdeals .container-fluid {
+    width: 100%;
+}
+
+#topdeals .card {
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#topdeals .card img {
+    width: 100%;
+}
+
+#topdeals [class*="row"] {
+    margin-bottom: 1em;
+    justify-content: center;
+}
+
+#topdeals h4 {
+    color: #00CEFF;
+}
+
+@media screen and (max-width: 767px) {
+    #topdeals h3 {
+        font-size: 1.4rem;
+    }
+    #topdeals h4 {
+        font-size: 1.2rem;
+    }
+    #topdeals {
+        position: relative;
+        top: -10px;
+    }
+}
+
+#topdeals [class*="col-"] {
+    width: 100%;
+}
+
+#topdeals .card-text {
+    font-weight: 500;
+}
+
+#topdeals a:after {
+    content: ' \203A';
+}
+
+#topdeals a {
+    color: #00CEFF;
+    font-weight: 500;
+}
+
+@media (min-width: 576px) {
+    #topdeals .card-deck {
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 100%
+    }
+}
+
+#topdeals .btn-successs {
+    background: #C2A061;
+    color: white;
+}
+
+#topdeals ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#topdeals ul li {
+    margin: 5px 0;
+}
+
+#topdeals .fobo {
+    font-style: bold !important;
+}
+
+#topdeals .modal-footer .btn a {
+    color: white !important;
+}

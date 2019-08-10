@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/login.css" />
+  <link rel="stylesheet" href="/css/customstyle.css" />
+  <title>Register Page</title>
+</head>
+
+
+<body>
+  <!-- navbar code start-->
+  <div id="navtop">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand"><img src="/images/mk_logo.png" class="img-fluid" /></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!--navbar code end -->
+
+  <!-- Registration Form start -->
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <a href="/api/auth/signin">
+        <h2 class="inactive underlineHover">Sign In</h2>
+      </a>
+      <h2 class="active">Sign Up</h2>
+      <form name="register" action="/api/auth/register" method="POST">
+        <input type="text" id="name" class="fadeIn first" name="name" placeholder="name">
+        <input type="text" id="login" class="fadeIn second" name="email" placeholder="email">
+        <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Register">
+      </form>
+
+    </div>
+  </div>
+  <!-- Registration Form end -->
+</body>
+
+</html>

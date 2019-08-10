@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/customstyle.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <title>Sports News</title>
+
+</head>
+
+<body>
+    <!-- navbar code start-->
+    <div id="navtop">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/"><img src="/images/mk_logo.png" class="img-fluid" /></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <%for(var i =0; i<menu.length; i++){%>
+                        <%if (i == 1) { %>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="<%=menu[i].link%>">
+                                <%=menu[i].name%>
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <% } else { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<%=menu[i].link%>">
+                                <%=menu[i].name%>
+                            </a>
+                        </li>
+                        <%}%>
+                            <%}%>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--navbar code end -->
+
+    <!--Sports new start-->
+    <div id="topdeals" class="mb-5">
+        <%for(var i = 0; i < rows; i++){%>
+        <div class="container-fluid mb-3">
+            <div class="row">
+                <div class="card-deck">
+                    <%for(var j = i*3; j < allNews.length && j < i*3 + 3; j++){%>
+                    <div class="card m-2">
+                        <div class="card-block p-4">
+                            </h4>
+                            <p class="card-text">
+                                <ul>
+                                    <h3><%=allNews[j].heading%></h3>
+                                    <li><%=allNews[j].details%></li>
+                                </ul>
+                            </p>
+                            <a href="/news/details/1/<%=allNews[j]._id%>" class="dismsg">View More</a>
+                        </div>
+                    </div>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+    <!--Sports new end-->
+
+
+    <!-- footer code start -->
+    <div class="footer p-2 bg-dark text-white text-center">
+        © 2019 MK. All rights reserved
+    </div>
+    <!-- footer code end -->
+</body>
+
+</html>

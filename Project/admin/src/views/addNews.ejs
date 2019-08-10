@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/customstyle.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/addNews.css" />
+    <title>Add News</title>
+
+    <script>
+        function resetForm() {
+            document.getElementById("addNews").reset();
+            showAlert("Added news successfully!");
+        }
+
+        function showAlert(msg) {
+            alert(msg);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- navbar code start-->
+    <div id="navtop">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/home"><img src="/images/mk_logo.png" class="img-fluid" /></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/news">Add News</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a href="api/auth/logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--navbar code end -->
+
+    <!-- Form start -->
+    <div class="container">
+        </br>
+        <form id="addNews" action="/news/addNews" method="POST">
+            <label for="lname">News</label>
+            <input type="text" id="lemail" name="heading" placeholder="News heading..">
+
+            <label for="details">Details</label>
+            <textarea id="details" name="details" placeholder="Write details.." style="height:200px"></textarea>
+            <input type="submit" value="Submit"></br></br></br></br></br>
+        </form>
+    </div>
+    <!-- Form end -->
+
+    <!-- footer code start -->
+    <div class="footer p-2 bg-dark text-white text-center">
+        © 2019 MK. All rights reserved
+    </div>
+    <!-- footer code end -->
+</body>
+
+</html>

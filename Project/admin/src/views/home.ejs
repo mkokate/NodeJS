@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/customstyle.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/table.css" />
+    <title>Home Page</title>
+
+</head>
+
+<body>
+    <!-- navbar code start-->
+    <div id="navtop">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/home"><img src="/images/mk_logo.png" class="img-fluid" /></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/news">Add News</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a href="/api/auth/logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--navbar code end -->
+
+    <!-- News start -->
+    <div style="padding: 20px">
+        <table class="blueTable">
+            <thead>
+                <tr align="center">
+                    <th>Sr.No</th>
+                    <th>Date</th>
+                    <th>News</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for(var i =0; i<allNews.length; i++){%>
+                <tr align="center">
+                    <td><%=i+1%></td>
+                    <td><%=allNews[i].date%></td>
+                    <td><%=allNews[i].heading%></td>
+                    <td>
+                        <form>
+                            <button type="submit" <button type="submit"
+                                formaction="/news/deleteNews/<%=allNews[i]._id%>">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <%}%>
+            </tbody>
+        </table>
+    </div>
+    <!-- News end-->
+
+
+    <!-- footer code start -->
+    <div class="footer p-2 bg-dark text-white text-center">
+        © 2019 MK. All rights reserved
+    </div>
+    <!-- footer code end -->
+</body>
+
+</html>
