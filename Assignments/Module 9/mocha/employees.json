@@ -1,0 +1,23 @@
+[
+    {
+        "id": "101",
+        "name": "Mahesh Kokate",
+        "deparment": "Production",
+        "projectId": "1",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/jagan123/128.jpg"
+    },
+    {
+        "id": "102",
+        "name": "Rajesh Mergu",
+        "deparment": "Production",
+        "projectId": "2",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/abdots/128.jpg"
+    },
+    {
+        "id": "103",
+        "name": "Arvind Morya",
+        "deparment": "Production",
+        "projectId": "3",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/aoimedia/128.jpg"
+    }
+]

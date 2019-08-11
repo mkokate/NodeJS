@@ -1,0 +1,24 @@
+{
+  "name": "employee",
+  "version": "1.0.0",
+  "description": "Assignment for model 3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  }
+}
