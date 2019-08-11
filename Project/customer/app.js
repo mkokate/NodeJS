@@ -5,6 +5,9 @@ import publicIp from 'public-ip';
 import db from './db';
 import axios from 'axios';
 import redis from 'redis';
+import path from 'path';
+import http from 'http';
+let io = require('socket.io');
 const client = redis.createClient();
 const app = express();
 const port = 7200;
@@ -13,6 +16,18 @@ const port = 7200;
 app.use(express.static(__dirname + '/public'));
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
+
+// Chat
+/*
+app.configure(() => {
+    app.set('port', process.env.PORT || 6700);
+    app.use(express.static(path.join(__dirname, 'public')));
+});
+
+app.configure('development', () => {
+    app.use(express.errorHandler());
+})
+*/
 
 // Common Menu
 var menu = [
@@ -90,6 +105,26 @@ app.get('/home/weather', (req, res) => {
         });
     });
 });
+
+
+// Chat
+/*
+let server = http.createServer(app).listen(app.get('port'), () => {
+    console.log('Server is running')
+});
+
+io = require('socket.io').listen(server);
+
+io.socket.on('connection', (socker) => {
+    socket.on('chat', (data) => {
+        let payload = {
+            message: data.message,
+        };
+        socket.emit('chat', payload);
+        socket.broadcast.emit('chat', payload)
+    })
+})
+*/
 
 app.listen(port, (err) => {
     console.log(`server is running on port ${port}`)

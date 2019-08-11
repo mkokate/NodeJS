@@ -27,8 +27,10 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongodb": "^3.2.3",
+    "mongoose": "^5.6.9",
     "node-iplocate": "^1.0.1",
     "public-ip": "^3.1.0",
-    "redis": "^2.8.0"
+    "redis": "^2.8.0",
+    "socket.io": "^2.2.0"
   }
 }

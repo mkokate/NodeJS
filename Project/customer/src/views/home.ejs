@@ -10,10 +10,37 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/customstyle.css" />
     <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/chat.css" />
     <script>
         !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+    </script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+        var socket = io.connect();
+
+        socket.on('chat', (data) => {
+            var msg = 'Message : ' + data.message;
+            $('textarea').val($('textarea').value + msg + '\n');
+        });
+
+        $(function () {
+            $('#chat').on('click', () => {
+                socket.emit('chat', {
+                    message: $('#chatText').val()
+                })
+            })
+        })
     </script>
     <title>MK-Home Page</title>
 
@@ -112,6 +139,23 @@
         </div>
     </div>
     <!-- Latest News end-->
+
+    <!-- Chat start -->
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/" class="form-container">
+            <h4>Chat</h4>
+
+            <label for="msg"><b>Message</b></label>
+            <textarea id="chatText" placeholder="Type message.." name="msg" required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- Chat end -->
 
 
     <!-- footer code start -->
