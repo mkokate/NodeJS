@@ -30,7 +30,7 @@
     "mongoose": "^5.6.9",
     "node-iplocate": "^1.0.1",
     "public-ip": "^3.1.0",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "socket.io": "^2.2.0"
   }
 }
