@@ -15,7 +15,7 @@
     "chai-http": "^4.3.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "request": "^2.88.0"
   },
   "devDependencies": {
