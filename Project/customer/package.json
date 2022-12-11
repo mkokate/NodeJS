@@ -25,7 +25,7 @@
     "babel-polyfill": "^6.26.0",
     "dateformat": "^3.0.3",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mongodb": "^3.2.3",
     "mongoose": "^5.6.9",
     "node-iplocate": "^1.0.1",
